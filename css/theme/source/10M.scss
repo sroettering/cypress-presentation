@@ -1,0 +1,83 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Mukta);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 42px;
+$mainFont: 'Mukta', sans-serif;
+$headingFont: 'Mukta', sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+    &, h1, h2, h3, h4, h5, h6 {
+        color: #fff;
+    }
+}
+
+body:after {
+    content: ' ';
+    background: url(../../../lib/img/10m_logo.svg) no-repeat;
+    background-size: contain;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    width: 50px;
+    height: 50px;
+}
+
+div.author {
+    font-size: 0.5em;
+
+    .avatar {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        border-radius: 100%;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            display: inline;
+            margin: 0 -25% !important;
+            border: none !important;
+            height: 100%;
+            width: auto;
+            max-width: none;
+            max-height: none;
+        }
+    }
+
+    .bio a {
+        color: rgb(103, 234, 0);
+    }
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
